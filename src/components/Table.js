@@ -60,7 +60,7 @@ export default class Table extends Component {
                         Name
                     </h3>
                     <h3>
-                      Surname
+                      Country
                     </h3>
                     <h3>
                       Birthday
