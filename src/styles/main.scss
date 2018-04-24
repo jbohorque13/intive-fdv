@@ -1,0 +1,171 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+hr {
+  border: 2px solid #666;
+}
+
+body {
+	background: #e8e8e8;
+  color: rgb(80, 145, 219);
+  font-family: 'Roboto', sans-serif;
+}
+
+.App-fdv{
+  margin: 0 auto;
+  > div {
+    width: 39%;
+    margin: 0 5%;
+    float: left;
+  }
+}
+.App-Title {
+  width: 100%!important;
+  margin:5% auto!important;
+  text-align: center;
+  h1 {
+    font-size: 25px;
+  }
+}
+.App-Form {
+  label {
+    display:block;
+    height: 40px;
+    span {
+      width: 20%;
+    }
+    input {
+      width: 76%;
+      margin: 0;
+      padding: 1% 2%;
+      border: none;
+      float: right;
+    }
+    h3 {
+      width: 29%;
+    }
+    select {
+      width: 80%;
+      margin: 0;
+      padding: 1%;
+      outline: none;
+      border: none;
+      float: right;
+	    background: #fff;
+    }
+		input { @include placeholder {
+		    color: #5091db;
+		}}
+		select { @include placeholder {
+		    color: #5091db;
+		}}
+  }
+}
+.Button-Save {
+  float: right;
+  padding: 2% 3%;
+  background: transparent;
+  color: #5091db;
+  border-color: #5091db;
+  border: 1px solid;
+  font-weight: 800;
+  margin-top: 5%;
+}
+.App-Table {
+	border:1px solid #5091db;
+}
+.Header {
+  border-bottom: 1px;
+  border-color: #000;
+  h3{
+    width: 33.333%;
+    float: left;
+		text-align: center;
+    font-size: 23px;
+  }
+}
+.counter {
+  display: flex;
+  margin: 0 auto;
+  height: 500px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  > div:first-child {
+    font-size: 100px;
+  }
+
+  a {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: row-reverse;
+
+    > div {
+      min-width: 40px;
+      height: 40px;
+      text-align: center;
+      background: #fff;
+      color: #3f51b5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 0 5px;
+      cursor: pointer;
+    }
+  }
+}
